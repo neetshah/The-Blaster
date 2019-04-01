@@ -8382,7 +8382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f84de51f57b9400a8604ee833e4b54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 10
   EnemyTag: Enemy
   partToRotate: {fileID: 510146655}
   fireRate: 1
@@ -8400,6 +8400,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001665210859143843, guid: b588fed804ebf4708ab76cd57c254cf0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001665210859143843, guid: b588fed804ebf4708ab76cd57c254cf0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001665210859143843, guid: b588fed804ebf4708ab76cd57c254cf0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 1724307586215957552, guid: b588fed804ebf4708ab76cd57c254cf0,
         type: 3}
@@ -8465,21 +8480,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9001665210859143843, guid: b588fed804ebf4708ab76cd57c254cf0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9001665210859143843, guid: b588fed804ebf4708ab76cd57c254cf0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 9001665210859143843, guid: b588fed804ebf4708ab76cd57c254cf0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.71
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b588fed804ebf4708ab76cd57c254cf0, type: 3}
