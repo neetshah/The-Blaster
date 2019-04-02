@@ -1,20 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArenaController : MonoBehaviour {
 
     public Transform[] enemies;
+
+    public bool placing;
 
     private float nextWaveCount = 15f;
     private float waveCountdown = 5f;
     private float timeBetweenEnemies = 2f;
     private int waveNum = 0;
 
+    private Vector3 placePoint;
+
+    private int towerToPlace;
+
+    public GameObject[] towers = new GameObject[2];
+
     public Transform startPoint;
 
+    public Inventory inv;
 
-    public GameObject gameOverScreen;
+    void Start() {
+
+        towerToPlace = -1;
+        placing = false;
+    }
 
 	void Update () {
 
@@ -26,7 +40,6 @@ public class ArenaController : MonoBehaviour {
         waveCountdown = waveCountdown - Time.deltaTime;
 
 
-        
 
 	}
 
@@ -49,6 +62,32 @@ public class ArenaController : MonoBehaviour {
     }
 
     public void gameOver() {
-        gameOverScreen.gameObject.SetActive(true);
     }
+
+    public void setPlacePoint(Vector3 p) {
+        placePoint = p;
+    }
+
+    public void setTowerToPlace(int t) {
+        towerToPlace = t;
+        placing = true;
+        Debug.Log(PlayerPrefs.GetInt("tower2Amount"));
+    }
+
+    public int getTowerToPlace() {
+        return towerToPlace;
+    }
+
+    public void placeTower() {
+
+        Instantiate(towers[towerToPlace], placePoint, transform.rotation);
+
+        inv.removeTower(towerToPlace);
+        
+
+        towerToPlace = -1;
+        placing = false;
+    }
+
+    
 }
