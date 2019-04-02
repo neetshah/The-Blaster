@@ -8,10 +8,12 @@ public class inGameMenuController : MonoBehaviour {
     public Button button1;
     public Button button2;
 
+    public Text tower1amount, tower2amount;
+
     // Start is called before the first frame update
     void Start() {
 
-        /*if (PlayerPrefs.HasKey("tower1Amount") && PlayerPrefs.HasKey("tower2Amount")) {
+        if (PlayerPrefs.HasKey("tower1Amount") && PlayerPrefs.HasKey("tower2Amount")) {
 
             Debug.Log("Shouldn't run");
 
@@ -22,7 +24,7 @@ public class inGameMenuController : MonoBehaviour {
         else {
             tower1amount.text = "" + 1;
             tower2amount.text = "" + 1;
-        }*/
+        }
     }
 
     void Update() {
@@ -35,6 +37,13 @@ public class inGameMenuController : MonoBehaviour {
         {
             button2.gameObject.SetActive(false);
         }
+
+        updateInventoryText();
+    }
+
+    public void updateInventoryText() {
+        tower1amount.text = "" + PlayerPrefs.GetInt("tower1Amount");
+        tower2amount.text = "" + PlayerPrefs.GetInt("tower2Amount");
     }
 
    

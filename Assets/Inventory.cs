@@ -10,8 +10,6 @@ public class Inventory : MonoBehaviour
 
     void Start() {
 
-        PlayerPrefs.DeleteAll();
-
         if (PlayerPrefs.HasKey("tower1Amount")) {
             towers[0] = PlayerPrefs.GetInt("tower1Amount");
         }

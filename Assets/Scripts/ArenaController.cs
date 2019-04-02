@@ -9,6 +9,8 @@ public class ArenaController : MonoBehaviour {
 
     public bool placing;
 
+    public GameObject gameOverScreen;
+
     private float nextWaveCount = 15f;
     private float waveCountdown = 5f;
     private float timeBetweenEnemies = 2f;
@@ -24,10 +26,17 @@ public class ArenaController : MonoBehaviour {
 
     public Inventory inv;
 
+    void Awake() {
+
+        PlayerPrefs.DeleteAll();
+    }
+
     void Start() {
 
         towerToPlace = -1;
         placing = false;
+        PlayerPrefs.SetInt("GameOver", 0);
+
     }
 
 	void Update () {
@@ -39,7 +48,9 @@ public class ArenaController : MonoBehaviour {
 
         waveCountdown = waveCountdown - Time.deltaTime;
 
-
+        if (PlayerPrefs.GetInt("GameOver") == 1) {
+            gameOver();
+        }
 
 	}
 
@@ -62,6 +73,8 @@ public class ArenaController : MonoBehaviour {
     }
 
     public void gameOver() {
+        Debug.Log("Game Over");
+        gameOverScreen.SetActive(true);
     }
 
     public void setPlacePoint(Vector3 p) {

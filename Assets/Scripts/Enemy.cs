@@ -30,9 +30,7 @@ public class Enemy : MonoBehaviour {
 
             Destroy(gameObject);
 
-            //ArenaController.gameOverScreen.SetActive(true);
-
-            arena.gameOver();
+            PlayerPrefs.SetInt("GameOver", 1);
 
             return;
         }
