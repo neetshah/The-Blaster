@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-   public void changemenuscene(string scenename)
+    static public int visited = 0;
+    static public string Arena;
+
+    public void changemenuscene(string NewScene)
     {
-        Application.LoadLevel (scenename);
+        Arena = NewScene;
+        visited++;
+        MainScreenChange.Cur_Arena = NewScene;
+        Application.LoadLevel("MainScreen");
     }
 }
