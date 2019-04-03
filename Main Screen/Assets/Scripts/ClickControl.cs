@@ -41,13 +41,13 @@ public class ClickControl : MonoBehaviour
             counter = 0;
             if (Menu.visited == 1)
                 SceneManager.LoadScene("2PickNeptuneMoon", LoadSceneMode.Single);
-            if (Menu.visited == 2)
+            else if (Menu.visited == 3)
             {
                 SceneManager.LoadScene("EndScreen", LoadSceneMode.Single);
             }
             else
             {
-                Debug.Log(Menu.Arena);
+                Debug.Log(Menu.visited);
                 if (Menu.Arena == "Neptune")
                 {
                     MainScreenChange.Cur_Arena = "Moon";
@@ -65,13 +65,13 @@ public class ClickControl : MonoBehaviour
             counter = 0;
             if (Menu.visited == 1)
                 SceneManager.LoadScene("2PickNeptuneMars", LoadSceneMode.Single);
-            if (Menu.visited == 2)
+            else if (Menu.visited == 3)
             {
                 SceneManager.LoadScene("EndScreen", LoadSceneMode.Single);
             }
             else
             {
-                Debug.Log(Menu.Arena);
+                Debug.Log(Menu.visited);
                 if (Menu.Arena == "Neptune")
                 {
                     MainScreenChange.Cur_Arena = "Mars";
@@ -89,13 +89,13 @@ public class ClickControl : MonoBehaviour
             counter = 0;
             if (Menu.visited == 1)
                 SceneManager.LoadScene("2PickMarsMoon", LoadSceneMode.Single);
-            if (Menu.visited == 2)
+            else if (Menu.visited == 3)
             {
                 SceneManager.LoadScene("EndScreen", LoadSceneMode.Single);
             }
             else
             {
-                Debug.Log(Menu.Arena);
+                Debug.Log(Menu.visited);
                 if (Menu.Arena == "Mars")
                 {
                     MainScreenChange.Cur_Arena = "Moon";

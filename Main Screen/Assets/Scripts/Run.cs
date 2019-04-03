@@ -46,7 +46,7 @@ public class Run : MonoBehaviour
         {
             ClickControl.counter = 0;
             if (Menu.visited == 1)
-                SceneManager.LoadScene("2PickNeptuneMoon", LoadSceneMode.Single);
+                SceneManager.LoadScene("2PickMarsMoon", LoadSceneMode.Single);
             else if (Menu.visited == 3)
                 SceneManager.LoadScene("EndScreen", LoadSceneMode.Single);
             else
