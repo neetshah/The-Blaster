@@ -20,6 +20,15 @@ public class GridNode : MonoBehaviour {
 
     void OnMouseDown() {
 
+        if (highlight == Color.red)
+        {
+            PlayerPrefs.SetInt("Valid", 0);
+        }
+
+        else {
+            PlayerPrefs.SetInt("Valid", 1);
+        }
+
 
         if (arena.getTowerToPlace() != -1 && !towerPlaced) {
             r.material.color = highlight;

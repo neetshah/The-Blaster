@@ -29,6 +29,7 @@ public class ArenaController : MonoBehaviour {
     void Awake() {
 
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("Valid", 1);
     }
 
     void Start() {
@@ -93,9 +94,20 @@ public class ArenaController : MonoBehaviour {
 
     public void placeTower() {
 
-        Instantiate(towers[towerToPlace], placePoint, transform.rotation);
 
-        inv.removeTower(towerToPlace);
+        if (PlayerPrefs.GetInt("Valid") == 1)
+        {
+            Instantiate(towers[towerToPlace], placePoint, transform.rotation);
+            inv.removeTower(towerToPlace);
+        }
+
+        else {
+            placing = true;
+            return;
+        }
+        
+
+        
         
 
         towerToPlace = -1;
