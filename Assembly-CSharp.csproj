@@ -64,6 +64,7 @@
     <Compile Include="Assets\GridNode.cs" />
     <Compile Include="Assets\inGameMenuController.cs" />
     <Compile Include="Assets\Inventory.cs" />
+    <Compile Include="Assets\Missile.cs" />
     <Compile Include="Assets\Scripts\ArenaController.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Checkpoints.cs" />

@@ -1,7 +1,9 @@
 ﻿<Properties StartupConfiguration="{7C9F9603-B0B6-CCD6-7DCF-D7F9877BFFC0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Turret.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Missile.cs">
     <Files>
-      <File FileName="Assets/Scripts/Turret.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Turret.cs" Line="84" Column="6" />
+      <File FileName="Assets/Missile.cs" Line="69" Column="10" />
+      <File FileName="Assets/Scripts/Bullet.cs" Line="35" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
