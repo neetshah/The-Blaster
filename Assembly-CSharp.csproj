@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Money.cs" />
     <Compile Include="Assets\Scripts\MouseOver.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
+    <Compile Include="Assets\Turret2.cs" />
     <Compile Include="Assets\validAreas.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/neetshah/Documents/Github/New/The-Blaster/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
