@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{7C9F9603-B0B6-CCD6-7DCF-D7F9877BFFC0}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Turret.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Turret.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
