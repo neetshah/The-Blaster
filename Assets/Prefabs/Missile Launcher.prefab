@@ -125,6 +125,7 @@ MonoBehaviour:
   range: 5
   EnemyTag: Enemy
   fireRate: 1
+  partToRotate: {fileID: 7460174993424558193}
 --- !u!1 &7209365316870722029
 GameObject:
   m_ObjectHideFlags: 0

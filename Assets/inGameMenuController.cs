@@ -7,6 +7,7 @@ public class inGameMenuController : MonoBehaviour {
 
     public Button button1;
     public Button button2;
+    public Button button3;
 
     public Text tower1amount, tower2amount;
 
@@ -36,6 +37,11 @@ public class inGameMenuController : MonoBehaviour {
         if (PlayerPrefs.GetInt("tower2Amount") <= 0)
         {
             button2.gameObject.SetActive(false);
+        }
+
+        if (PlayerPrefs.GetInt("Main") == 1)
+        {
+            button3.gameObject.SetActive(false);
         }
 
         updateInventoryText();

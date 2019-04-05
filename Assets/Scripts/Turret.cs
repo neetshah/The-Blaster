@@ -18,6 +18,7 @@ public class Turret : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.3f);
+        fireRate = fireRate * (PlayerPrefs.GetInt("Tower1Upgrade") + 1);
     }
 
     void UpdateTarget()
