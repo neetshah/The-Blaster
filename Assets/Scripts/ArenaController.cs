@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ArenaController : MonoBehaviour {
+public class ArenaController : MonoBehaviour
+{
 
     public Transform[] enemies;
 
     public bool placing;
 
-    public GameObject gameOverScreen;
+    public GameObject gameOverScreen, winScreen;
 
     private float nextWaveCount = 15f;
     private float waveCountdown = 5f;
@@ -26,14 +27,17 @@ public class ArenaController : MonoBehaviour {
 
     public Inventory inv;
 
-    void Awake() {
+    void Awake()
+    {
 
         //PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("Valid", 1);
         PlayerPrefs.SetInt("Main", 0);
+        PlayerPrefs.SetInt("Kills", 0);
     }
 
-    void Start() {
+    void Start()
+    {
 
         towerToPlace = -1;
         placing = false;
@@ -41,25 +45,35 @@ public class ArenaController : MonoBehaviour {
 
     }
 
-	void Update () {
+    void Update()
+    {
 
-        if (waveCountdown <= 0f) {
+        if (waveCountdown <= 0f)
+        {
             StartCoroutine(createWave());
             waveCountdown = nextWaveCount;
         }
 
         waveCountdown = waveCountdown - Time.deltaTime;
 
-        if (PlayerPrefs.GetInt("GameOver") == 1) {
+        if (PlayerPrefs.GetInt("GameOver") == 1)
+        {
             gameOver();
         }
 
-	}
+        if (PlayerPrefs.GetInt("Kills") == 20)
+        {
+            win();
+        }
+
+    }
 
 
-    IEnumerator createWave() {
+    IEnumerator createWave()
+    {
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
+        {
             spawnEnemy();
 
             yield return new WaitForSeconds(timeBetweenEnemies);
@@ -70,29 +84,35 @@ public class ArenaController : MonoBehaviour {
     }
 
 
-    private void spawnEnemy() {
+    private void spawnEnemy()
+    {
         Instantiate(enemies[waveNum % 2], startPoint.position, startPoint.rotation);
     }
 
-    public void gameOver() {
+    public void gameOver()
+    {
         Debug.Log("Game Over");
         gameOverScreen.SetActive(true);
     }
 
-    public void setPlacePoint(Vector3 p) {
+    public void setPlacePoint(Vector3 p)
+    {
         placePoint = p;
     }
 
-    public void setTowerToPlace(int t) {
+    public void setTowerToPlace(int t)
+    {
         towerToPlace = t;
         placing = true;
     }
 
-    public int getTowerToPlace() {
+    public int getTowerToPlace()
+    {
         return towerToPlace;
     }
 
-    public void placeTower() {
+    public void placeTower()
+    {
 
 
         if (PlayerPrefs.GetInt("Valid") == 1)
@@ -101,20 +121,27 @@ public class ArenaController : MonoBehaviour {
             inv.removeTower(towerToPlace);
         }
 
-        else {
+        else
+        {
             placing = true;
             return;
         }
 
-        if (towerToPlace == 2) {
+        if (towerToPlace == 2)
+        {
             PlayerPrefs.SetInt("Main", 1);
         }
-        
-        
+
+
 
         towerToPlace = -1;
         placing = false;
     }
 
-    
+    public void win()
+    {
+        winScreen.SetActive(true);
+    }
+
+
 }
