@@ -20,7 +20,7 @@ public class ArenaController : MonoBehaviour {
 
     private int towerToPlace;
 
-    public GameObject[] towers = new GameObject[2];
+    public GameObject[] towers = new GameObject[3];
 
     public Transform startPoint;
 
@@ -30,6 +30,7 @@ public class ArenaController : MonoBehaviour {
 
         //PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("Valid", 1);
+        PlayerPrefs.SetInt("Main", 0);
     }
 
     void Start() {
@@ -85,7 +86,6 @@ public class ArenaController : MonoBehaviour {
     public void setTowerToPlace(int t) {
         towerToPlace = t;
         placing = true;
-        Debug.Log(PlayerPrefs.GetInt("tower2Amount"));
     }
 
     public int getTowerToPlace() {
@@ -105,8 +105,10 @@ public class ArenaController : MonoBehaviour {
             placing = true;
             return;
         }
-        
 
+        if (towerToPlace == 2) {
+            PlayerPrefs.SetInt("Main", 1);
+        }
         
         
 

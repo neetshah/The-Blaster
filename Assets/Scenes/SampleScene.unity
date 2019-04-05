@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3639,9 +3639,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1545337891276780, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9, type: 3}
-      propertyPath: m_Name
-      value: ArenaController
+    - target: {fileID: 114432053484529574, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9,
+        type: 3}
+      propertyPath: towers.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114432053484529574, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9,
         type: 3}
@@ -3659,6 +3660,16 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 6126417}
+    - target: {fileID: 114432053484529574, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9,
+        type: 3}
+      propertyPath: towers.Array.data[2]
+      value: 
+      objectReference: {fileID: 7209365316870722027, guid: 8228ee09ef396488c888fb857c898dc4,
+        type: 3}
+    - target: {fileID: 1545337891276780, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9, type: 3}
+      propertyPath: m_Name
+      value: ArenaController
+      objectReference: {fileID: 0}
     - target: {fileID: 4009867510663708, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.5967865
@@ -6669,15 +6680,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2947753004386024145, guid: 955bddab92947044d8d600e2d70268cd,
-        type: 3}
-      propertyPath: m_Name
-      value: Defense Inventory
-      objectReference: {fileID: 0}
     - target: {fileID: 2947753004386024146, guid: 955bddab92947044d8d600e2d70268cd,
         type: 3}
       propertyPath: menu
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947753004386024145, guid: 955bddab92947044d8d600e2d70268cd,
+        type: 3}
+      propertyPath: m_Name
+      value: Defense Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 2947753004386024147, guid: 955bddab92947044d8d600e2d70268cd,
         type: 3}

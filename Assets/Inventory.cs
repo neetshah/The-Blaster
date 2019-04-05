@@ -73,16 +73,33 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void removeTower(int type) {
+    public void upgradeMain() {
 
-        towers[type]--;
-
-        if (type == 0) {
-            PlayerPrefs.SetInt("tower1Amount", towers[type]);
+        if (!PlayerPrefs.HasKey("MainUpgrade"))
+        {
+            PlayerPrefs.SetInt("MainUpgrade", 0);
         }
 
-        else if (type == 1) {
-            PlayerPrefs.SetInt("tower2Amount", towers[type]);
+        if (PlayerPrefs.GetInt("Money") >= 100)
+        {
+            PlayerPrefs.SetInt("MainUpgrade", PlayerPrefs.GetInt("MainUpgrade") + 1);
+        }
+    }
+
+    public void removeTower(int type) {
+
+        if (type != 2) {
+            towers[type]--;
+
+            if (type == 0)
+            {
+                PlayerPrefs.SetInt("tower1Amount", towers[type]);
+            }
+
+            else if (type == 1)
+            {
+                PlayerPrefs.SetInt("tower2Amount", towers[type]);
+            }
         }
         
 

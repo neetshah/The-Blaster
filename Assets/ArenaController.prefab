@@ -46,8 +46,11 @@ MonoBehaviour:
   enemies:
   - {fileID: 4563459865497782, guid: e048d9a6c93768e41b6fe5bf13cedf11, type: 3}
   - {fileID: 4206084382338836, guid: b419ef9c03ed01e40b55c4e991dcf526, type: 3}
+  placing: 0
+  gameOverScreen: {fileID: 0}
   towers:
   - {fileID: 1724307586216249360, guid: b588fed804ebf4708ab76cd57c254cf0, type: 3}
   - {fileID: 1724307586216249360, guid: 74dd2b3f3c05ced40b41ef764bacccc2, type: 3}
+  - {fileID: 7209365316870722027, guid: 8228ee09ef396488c888fb857c898dc4, type: 3}
   startPoint: {fileID: 4789115527874522, guid: bc88ad751d856db4e8b4c40310b93605, type: 3}
   inv: {fileID: 2947753004386024146, guid: 955bddab92947044d8d600e2d70268cd, type: 3}

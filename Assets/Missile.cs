@@ -6,9 +6,9 @@ public class Missile : MonoBehaviour
 {
     // Start is called before the first frame update
     private Transform target;
-    public float range = 5f;
+    public float range = 1f;
     public string EnemyTag = "Enemy";
-    public float fireRate = 1f;
+    public float fireRate = 0.001f;
     private float fireCountDown = 0f;
     public Transform partToRotate;
 
@@ -16,6 +16,8 @@ public class Missile : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.3f);
+        range = range * (PlayerPrefs.GetInt("MainUpgrade") + 1);
+        fireRate = fireRate * (PlayerPrefs.GetInt("MainUpgrade") + 1);
     }
 
     void UpdateTarget()
