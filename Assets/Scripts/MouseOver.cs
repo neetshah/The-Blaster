@@ -10,7 +10,7 @@ public class MouseOver : MonoBehaviour {
 
 	[SerializeField]
 	private Text info;
-
+    private Image image;
 
 	public static MouseOver MyIns{
 		get{ 
@@ -37,13 +37,13 @@ public class MouseOver : MonoBehaviour {
 		info = GameObject.Find ("Arena2ToolTip").GetComponentInChildren<Text> ();
 
 		if ( string.Compare(tHov,"Arena2Text") == 0) {
-			info.text = " Arena 2\n Theme: Water \n Boss: Blasotoise \n Reward: 200 \n ";
+			info.text = " Arena 2\n Planet: Neptune \n Reward: 200 \n ";
 		} else if ( string.Compare(tHov,"Arena3Text") == 0) {
-			info.text = " Arena 3\n Theme: Fire \n Boss: Flamoise \n Reward: 250 \n ";
+			info.text = " Arena 3\n Planet: Titan \n Reward: 250 \n ";
 		} else if ( string.Compare(tHov,"Arena4Text") == 0) {
-			info.text = " Arena 4\n Theme: Wind \n Boss: Windoit \n Reward: 300 \n ";
+			info.text = " Arena 4\n " + " Planet: Mars \n Reward: 300 \n ";
 		} else if ( string.Compare(tHov,"Arena1Text") == 0) {
-			info.text = " Arena 1\n Theme: Earth \n Boss: Earthasauras \n Reward: 400 \n ";
+			info.text = " Arena 1\n Planet: Earth \n Reward: 400 \n ";
 		} 
 	}
 
