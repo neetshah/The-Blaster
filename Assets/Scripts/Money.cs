@@ -13,7 +13,9 @@ public class Money : MonoBehaviour
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") - amount);
     }
 
-    public bool compareCost(int cost) {
-        return PlayerPrefs.GetInt("Money") > cost;
+    public void compareCost(int cost) {
+        if (PlayerPrefs.GetInt("Money") >= cost) {
+            subtractMoney(cost);
+        }
     }
 }

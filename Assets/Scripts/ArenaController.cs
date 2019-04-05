@@ -28,7 +28,7 @@ public class ArenaController : MonoBehaviour {
 
     void Awake() {
 
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("Valid", 1);
     }
 
