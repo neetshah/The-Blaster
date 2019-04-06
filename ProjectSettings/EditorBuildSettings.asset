@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/SelectArena.unity
     guid: 8ae388b82af12584b949ce61817488f1
@@ -44,9 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EarthBossVictory.unity
     guid: ae91177bf9c22bd4cbe52a9f19bde78d
-  - enabled: 1
-    path: Assets/Scenes/BossMars.unity
-    guid: 8056c4562a51f754e96b92bb5fcb8041
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/IntroScreen.unity
     guid: 9c38ea811cf3e0b4aaa8186b90826868
@@ -56,4 +56,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossNeptune.unity
     guid: 9c9ce23e682688f418746974e4f21cab
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 6bbcc5b081e024bc4b838e5f2a76dce4
+  - enabled: 1
+    path: Assets/Scenes/Boss Level.unity
+    guid: 8d2d08a081aa74be480414fdc63d9bb9
+  - enabled: 1
+    path: Assets/Scenes/ShopScene.unity
+    guid: 305a6c692c99ed14592e8876550dfdaa
+  - enabled: 1
+    path: Assets/Scenes/DieScreen.unity
+    guid: 153362ad336f719449ae47432e0c715a
   m_configObjects: {}

@@ -34,5 +34,6 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
         Destroy(target.gameObject);
+        PlayerPrefs.SetInt("Kills", PlayerPrefs.GetInt("Kills") + 1);
     }
 }

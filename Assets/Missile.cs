@@ -70,6 +70,7 @@ public class Missile : MonoBehaviour
     void Shoot()
     {
         Destroy(target.gameObject);
+        PlayerPrefs.SetInt("Kills", PlayerPrefs.GetInt("Kills") + 1);
     }
 
     private void OnDrawGizmosSelected()

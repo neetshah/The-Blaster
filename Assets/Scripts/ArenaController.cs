@@ -12,9 +12,9 @@ public class ArenaController : MonoBehaviour
 
     public GameObject gameOverScreen, winScreen;
 
-    public float nextWaveCount = 3f;
+    private float nextWaveCount = 15f;
     private float waveCountdown = 5f;
-    public float timeBetweenEnemies = 0.5f;
+    private float timeBetweenEnemies = 2f;
     private int waveNum = 0;
 
     private Vector3 placePoint;
