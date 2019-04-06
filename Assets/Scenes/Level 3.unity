@@ -3552,7 +3552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -345.48, y: 300}
+  m_AnchoredPosition: {x: -405.5, y: 355.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894033865
@@ -4017,6 +4017,28 @@ PrefabInstance:
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 322634280}
+    - target: {fileID: 114432053484529574, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9,
+        type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 4563459865497782, guid: a77bf3dce1885374ab96f41821371f82,
+        type: 3}
+    - target: {fileID: 114432053484529574, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 4206084382338836, guid: 963fdce44ab0e434da66c4ae6ec1f872,
+        type: 3}
+    - target: {fileID: 114432053484529574, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9,
+        type: 3}
+      propertyPath: timeBetweenEnemies
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432053484529574, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9,
+        type: 3}
+      propertyPath: nextWaveCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4009867510663708, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.5967865

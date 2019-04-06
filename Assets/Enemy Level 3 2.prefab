@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 136215840486600280}
   - component: {fileID: 114697713409774426}
   m_Layer: 0
-  m_Name: Enemy2
+  m_Name: Enemy Level 3 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114697713409774426
@@ -105,5 +105,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0802217d8632eaf4b95f184e4535f343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 15
   arena: {fileID: 114432053484529574, guid: e4b5b542b1f8c734fbb5a57d4f2e38a9, type: 3}

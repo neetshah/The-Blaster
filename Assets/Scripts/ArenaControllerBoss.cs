@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ArenaController : MonoBehaviour
-{
-
-    public Transform[] enemies;
+public class ArenaControllerBoss : MonoBehaviour { 
 
     public bool placing;
 
     public GameObject gameOverScreen, winScreen;
 
-    public float nextWaveCount = 3f;
+    private float nextWaveCount = 15f;
     private float waveCountdown = 5f;
-    public float timeBetweenEnemies = 0.5f;
+    private float timeBetweenEnemies = 2f;
     private int waveNum = 0;
 
     private Vector3 placePoint;
@@ -48,12 +45,7 @@ public class ArenaController : MonoBehaviour
     void Update()
     {
 
-        if (waveCountdown <= 0f)
-        {
-            StartCoroutine(createWave());
-            waveCountdown = nextWaveCount;
-        }
-
+        
         waveCountdown = waveCountdown - Time.deltaTime;
 
         if (PlayerPrefs.GetInt("GameOver") == 1)
@@ -69,25 +61,9 @@ public class ArenaController : MonoBehaviour
     }
 
 
-    IEnumerator createWave()
-    {
+    
 
-        for (int i = 0; i < 5; i++)
-        {
-            spawnEnemy();
-
-            yield return new WaitForSeconds(timeBetweenEnemies);
-        }
-
-
-        waveNum++;
-    }
-
-
-    private void spawnEnemy()
-    {
-        Instantiate(enemies[waveNum % 2], startPoint.position, startPoint.rotation);
-    }
+    
 
     public void gameOver()
     {
