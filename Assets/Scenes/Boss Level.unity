@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2705,18 +2705,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48f7d493e166542379845b37d1dfd7a1, type: 3}
---- !u!114 &569164213 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2947753004386024146, guid: 955bddab92947044d8d600e2d70268cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 2106763777}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9674a1563ba18d24294b39871de7d72f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &575045726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3030,6 +3018,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5854635958488378168, guid: 48f7d493e166542379845b37d1dfd7a1,
     type: 3}
   m_PrefabInstance: {fileID: 808063109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &702860892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4789115527874522, guid: bc88ad751d856db4e8b4c40310b93605,
+    type: 3}
+  m_PrefabInstance: {fileID: 845934124}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &720538784
 GameObject:
@@ -5483,12 +5477,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48f7d493e166542379845b37d1dfd7a1, type: 3}
---- !u!4 &1369440251 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4789115527874522, guid: bc88ad751d856db4e8b4c40310b93605,
+--- !u!114 &1377447186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2947753004386024146, guid: 955bddab92947044d8d600e2d70268cd,
     type: 3}
-  m_PrefabInstance: {fileID: 845934124}
+  m_PrefabInstance: {fileID: 2106763777}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9674a1563ba18d24294b39871de7d72f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1388324797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7670,18 +7670,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2008647402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5892c7a829e21644d8ba553b92356c48, type: 3}
+  m_Script: {fileID: 11500000, guid: 16ff7c21e421a5b4fbc31f07babc6bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   placing: 0
   gameOverScreen: {fileID: 6126417}
   winScreen: {fileID: 1505980101}
   towers:
-  - {fileID: 1724307586216249360, guid: f51b713f0f306c24895201db8b69ee7d, type: 3}
-  - {fileID: 1724307586216249360, guid: 9947fc3aaf8c9fc47a091a524bca80ff, type: 3}
+  - {fileID: 1724307586216249360, guid: b588fed804ebf4708ab76cd57c254cf0, type: 3}
+  - {fileID: 1724307586216249360, guid: 74dd2b3f3c05ced40b41ef764bacccc2, type: 3}
   - {fileID: 7209365316870722027, guid: 8228ee09ef396488c888fb857c898dc4, type: 3}
-  startPoint: {fileID: 1369440251}
-  inv: {fileID: 569164213}
+  startPoint: {fileID: 702860892}
+  inv: {fileID: 1377447186}
 --- !u!4 &2008647404
 Transform:
   m_ObjectHideFlags: 0
@@ -8620,15 +8620,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2947753004386024145, guid: 955bddab92947044d8d600e2d70268cd,
-        type: 3}
-      propertyPath: m_Name
-      value: Defense Inventory
-      objectReference: {fileID: 0}
     - target: {fileID: 2947753004386024146, guid: 955bddab92947044d8d600e2d70268cd,
         type: 3}
       propertyPath: menu
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947753004386024145, guid: 955bddab92947044d8d600e2d70268cd,
+        type: 3}
+      propertyPath: m_Name
+      value: Defense Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 2947753004386024147, guid: 955bddab92947044d8d600e2d70268cd,
         type: 3}
@@ -8798,6 +8798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Laser Beamer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338352210018849990, guid: 12f88ac6ba9b84ad39c25231ef5371ab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8338352210018814182, guid: 12f88ac6ba9b84ad39c25231ef5371ab,
         type: 3}

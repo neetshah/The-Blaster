@@ -8,10 +8,7 @@ public class DisplayMoney : MonoBehaviour
 
     public Text money, t1, t2;
 
-    void Awake() {
-        PlayerPrefs.SetInt("Money", 200);
-    }
-
+   
     // Start is called before the first frame update
     void Start()
     {
