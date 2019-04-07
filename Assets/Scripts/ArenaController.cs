@@ -12,9 +12,9 @@ public class ArenaController : MonoBehaviour
 
     public GameObject gameOverScreen, winScreen;
 
-    private float nextWaveCount = 15f;
+    public float nextWaveCount = 15f;
     private float waveCountdown = 5f;
-    private float timeBetweenEnemies = 2f;
+    public float timeBetweenEnemies = 2f;
     private int waveNum = 0;
 
     private Vector3 placePoint;
@@ -30,7 +30,6 @@ public class ArenaController : MonoBehaviour
     void Awake()
     {
 
-        //PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("Valid", 1);
         PlayerPrefs.SetInt("Main", 0);
         PlayerPrefs.SetInt("Kills", 0);
@@ -66,13 +65,15 @@ public class ArenaController : MonoBehaviour
             win();
         }
 
+        Debug.Log("Kills: " + PlayerPrefs.GetInt("Kills"));
+
     }
 
 
     IEnumerator createWave()
     {
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 4; i++)
         {
             spawnEnemy();
 
@@ -141,6 +142,8 @@ public class ArenaController : MonoBehaviour
     public void win()
     {
         winScreen.SetActive(true);
+        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 50);
+        Time.timeScale = 0;
     }
 
 

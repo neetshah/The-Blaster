@@ -9,10 +9,12 @@ public class inGameMenuController : MonoBehaviour {
     public Button button2;
     public Button button3;
 
-    public Text tower1amount, tower2amount;
+    public Text tower1amount, tower2amount, currentGold;
 
     // Start is called before the first frame update
     void Start() {
+
+        currentGold.text = "Current Gold: " + PlayerPrefs.GetInt("Money");
 
         if (PlayerPrefs.HasKey("tower1Amount") && PlayerPrefs.HasKey("tower2Amount")) {
 
@@ -45,6 +47,7 @@ public class inGameMenuController : MonoBehaviour {
         }
 
         updateInventoryText();
+
     }
 
     public void updateInventoryText() {
