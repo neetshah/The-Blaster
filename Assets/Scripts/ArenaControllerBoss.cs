@@ -117,6 +117,7 @@ public class ArenaControllerBoss : MonoBehaviour {
     public void win()
     {
         winScreen.SetActive(true);
+        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 200);
     }
 
 
