@@ -27,12 +27,15 @@ public class ArenaController : MonoBehaviour
 
     public Inventory inv;
 
+    private bool won = false;
+
     void Awake()
     {
 
         PlayerPrefs.SetInt("Valid", 1);
         PlayerPrefs.SetInt("Main", 0);
         PlayerPrefs.SetInt("Kills", 0);
+        Time.timeScale = 1;
     }
 
     void Start()
@@ -47,7 +50,7 @@ public class ArenaController : MonoBehaviour
     void Update()
     {
 
-        if (waveCountdown <= 0f)
+        if (waveCountdown <= 0f && waveNum < 4)
         {
             StartCoroutine(createWave());
             waveCountdown = nextWaveCount;
@@ -60,9 +63,10 @@ public class ArenaController : MonoBehaviour
             gameOver();
         }
 
-        if (PlayerPrefs.GetInt("Kills") == 20)
+        if (PlayerPrefs.GetInt("Kills") == 20 && !won)
         {
             win();
+            won = true;
         }
 
         Debug.Log("Kills: " + PlayerPrefs.GetInt("Kills"));
@@ -73,7 +77,7 @@ public class ArenaController : MonoBehaviour
     IEnumerator createWave()
     {
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 5; i++)
         {
             spawnEnemy();
 
@@ -142,7 +146,9 @@ public class ArenaController : MonoBehaviour
     public void win()
     {
         winScreen.SetActive(true);
+        Debug.Log(PlayerPrefs.GetInt("Money"));
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 50);
+        Debug.Log(PlayerPrefs.GetInt("Money"));
         Time.timeScale = 0;
     }
 

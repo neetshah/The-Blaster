@@ -24,6 +24,8 @@ public class ArenaControllerBoss : MonoBehaviour {
 
     public Inventory inv;
 
+    private bool won = false;
+
     void Awake()
     {
 
@@ -31,6 +33,7 @@ public class ArenaControllerBoss : MonoBehaviour {
         PlayerPrefs.SetInt("Valid", 1);
         PlayerPrefs.SetInt("Main", 0);
         PlayerPrefs.SetInt("Kills", 0);
+        Time.timeScale = 1;
     }
 
     void Start()
@@ -53,9 +56,10 @@ public class ArenaControllerBoss : MonoBehaviour {
             gameOver();
         }
 
-        if (PlayerPrefs.GetInt("Kills") == 1)
+        if (PlayerPrefs.GetInt("Kills") == 1 && !won)
         {
             win();
+            won = true;
         }
 
     }
